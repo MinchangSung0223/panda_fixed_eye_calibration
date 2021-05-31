@@ -15,6 +15,7 @@ import moveit_msgs.msg
 import geometry_msgs.msg
 import shutil
 import os
+import pybullet as p
 from pybullet import getQuaternionFromEuler,getEulerFromQuaternion,getMatrixFromQuaternion,invertTransform
 import numpy as np
 np.set_printoptions(formatter={'float_kind': lambda x: "{0:0.6f}".format(x)})
@@ -69,6 +70,11 @@ os.mkdir("./Poses")
 # Start streaming
 pipeline.start(config)
 count = 0;
+shutil.rmtree("./Images")
+shutil.rmtree("./Poses")
+os.mkdir("./Images")
+os.mkdir("./Poses")
+
 try:
     while True:
 
@@ -100,10 +106,6 @@ try:
 
         eef_pose = move_group.get_current_pose().pose 
         Tbe = getHomogeneousFormFromPose(eef_pose) #base to eef
-        shutil.rmtree("./Images")
-        shutil.rmtree("./Poses")
-        os.mkdir("./Images")
-        os.mkdir("./Poses")
 
         # Show images
         cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)

@@ -1,0 +1,218 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="3617627739" file="/home/sung/workspace/panda_fixed_eye_calibration/matlab_files/handeye_calibration.prj" location="/home/sung/workspace/panda_fixed_eye_calibration/matlab_files" name="handeye_calibration" preferred-package-location="/home/sung/workspace/panda_fixed_eye_calibration/matlab_files/handeye_calibration/for_redistribution" preferred-package-type="package.type.install" target="target.ezdeploy.library" target-name="Library Compiler">
+    <param.appname>handeye_calibration</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>2.0</param.version>
+    <param.authnamewatermark>SMC</param.authnamewatermark>
+    <param.email>tjdalsckd@gmail.com</param.email>
+    <param.company>Hanyang University</param.company>
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.guid />
+    <param.installpath.string>/Hanyang_University/handeye_calibration/</param.installpath.string>
+    <param.installpath.combo>option.installpath.user</param.installpath.combo>
+    <param.logo />
+    <param.install.notes>export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:MR/v96/runtime/glnxa64:MR/v96/bin/glnxa64:MR/v96/sys/os/glnxa64:MR/v96/sys/opengl/lib/glnxa64</param.install.notes>
+    <param.target.install.notes>In the following directions, replace MR/v96 by the directory on the target machine where MATLAB is installed, or MR by the directory where the MATLAB Runtime is installed.
+
+(1) Set the environment variable XAPPLRESDIR to this value:
+
+MR/v96/X11/app-defaults
+
+
+(2) If the environment variable LD_LIBRARY_PATH is undefined, set it to the following:
+
+MR/v96/runtime/glnxa64:MR/v96/bin/glnxa64:MR/v96/sys/os/glnxa64:MR/v96/sys/opengl/lib/glnxa64
+
+If it is defined, set it to the following:
+
+${LD_LIBRARY_PATH}:MR/v96/runtime/glnxa64:MR/v96/bin/glnxa64:MR/v96/sys/os/glnxa64:MR/v96/sys/opengl/lib/glnxa64
+
+You must have Python 2.7, 3.5, 3.6, and/or 3.7 on your machine to install this package. Go to the directory containing your package and the file setup.py and execute:
+
+        python setup.py install [options]
+
+For details, see GettingStarted.html, distributed with this package, or the official Python documentation at:
+
+        https://docs.python.org/2/install/index.html</param.target.install.notes>
+    <param.intermediate>${PROJECT_ROOT}/handeye_calibration/for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}/handeye_calibration/for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}/handeye_calibration/for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}/handeye_calibration</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.python.module</param.target.type>
+    <param.support.packages />
+    <param.namespace />
+    <param.classorg />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>false</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.user.only.registration>false</param.user.only.registration>
+    <param.assembly.type>false</param.assembly.type>
+    <param.encryption.key.file />
+    <param.net.enable.remoting>false</param.net.enable.remoting>
+    <param.net.tsa.enable>false</param.net.tsa.enable>
+    <param.net.tsa.assembly />
+    <param.net.tsa.interface />
+    <param.net.tsa.namespace />
+    <param.net.tsa.superclass>Class1</param.net.tsa.superclass>
+    <param.net.tsa.metadata />
+    <param.net.tsa.metadata.assembly>/home/sung/workspace/panda_fixed_eye_calibration/matlab_files</param.net.tsa.metadata.assembly>
+    <param.net.saved.interface />
+    <param.cpp.api>option.cpp.all</param.cpp.api>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.support.packages />
+      <param.namespace />
+      <param.classorg />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.user.only.registration />
+      <param.assembly.type />
+      <param.encryption.key.file />
+      <param.net.enable.remoting />
+      <param.net.tsa.enable />
+      <param.net.tsa.assembly />
+      <param.net.tsa.interface />
+      <param.net.tsa.namespace />
+      <param.net.tsa.superclass />
+      <param.net.tsa.metadata />
+      <param.net.tsa.metadata.assembly />
+      <param.net.saved.interface />
+      <param.cpp.api />
+    </unset>
+    <fileset.exports>
+      <file>${PROJECT_ROOT}/start_calibration.m</file>
+    </fileset.exports>
+    <fileset.classes>
+      <entity.package name="">
+        <entity.class name="Class1">
+          <file>${PROJECT_ROOT}/start_calibration.m</file>
+        </entity.class>
+      </entity.package>
+    </fileset.classes>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}/functions/CalCamArm.m</file>
+      <file>${PROJECT_ROOT}/functions/ConvertTformSystem.m</file>
+      <file>${PROJECT_ROOT}/functions/MatrixLog3.m</file>
+      <file>${PROJECT_ROOT}/functions/ProjectError.m</file>
+      <file>${PROJECT_ROOT}/functions/ProjectErrorEyeInHand.m</file>
+      <file>${PROJECT_ROOT}/functions/R2V.m</file>
+      <file>${PROJECT_ROOT}/functions/T2V.m</file>
+      <file>${PROJECT_ROOT}/functions/TransInv.m</file>
+      <file>${PROJECT_ROOT}/functions/TransToRp.m</file>
+      <file>${PROJECT_ROOT}/functions/V2R.m</file>
+      <file>${PROJECT_ROOT}/functions/V2T.m</file>
+      <file>${PROJECT_ROOT}/functions/calibration_AX_XB.m</file>
+      <file>${PROJECT_ROOT}/functions/calibration_test.m</file>
+      <file>${PROJECT_ROOT}/functions/drawAxis.m</file>
+      <file>${PROJECT_ROOT}/functions/invsqrt.m</file>
+      <file>${PROJECT_ROOT}/functions/load_images.m</file>
+      <file>${PROJECT_ROOT}/functions/load_poses.m</file>
+      <file>${PROJECT_ROOT}/functions/pose_R_to_transformation.m</file>
+      <file>${PROJECT_ROOT}/functions/pose_to_transformation.m</file>
+      <file>${PROJECT_ROOT}/functions/so3ToVec.m</file>
+    </fileset.resources>
+    <fileset.depfun>
+      <file>${MATLAB_ROOT}/examples/sldv/data.mat</file>
+    </fileset.depfun>
+    <fileset.package>
+      <file>${PROJECT_ROOT}/Result</file>
+    </fileset.package>
+    <fileset.examples>
+      <file>${PROJECT_ROOT}/start_calibrationSample1.m</file>
+    </fileset.examples>
+    <fileset.documentation />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}/handeye_calibration/for_testing" name="setup.py" optional="false">/home/sung/workspace/panda_fixed_eye_calibration/matlab_files/handeye_calibration/for_testing/setup.py</file>
+      <file location="${PROJECT_ROOT}/handeye_calibration/for_testing" name="handeye_calibration" optional="false">/home/sung/workspace/panda_fixed_eye_calibration/matlab_files/handeye_calibration/for_testing/handeye_calibration</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>/usr/local/MATLAB/R2019a</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>true</unix>
+      <mac>false</mac>
+      <windows>false</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>true</linux>
+      <solaris>false</solaris>
+      <osver>5.8.0-53-generic</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>glnxa64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

@@ -1,7 +1,8 @@
-function [TBaseToCam,TEndToBoard]=start_calibration(imageFolder,poseFolder,squareSize,board_size)
+function [TBaseToCam,TEndToBoard]=start_calibration(imageFolder,poseFolder,squareSize,board_size,show_image)
 
     
-[imagePoints,worldPoints]=load_images(imageFolder,squareSize,board_size);
+[imagePoints,worldPoints]=load_images(imageFolder,squareSize,board_size,show_image);
+
 armMat = load_poses(poseFolder);
 image_num = size(imagePoints,3);
 cameraParams = estimateCameraParameters(imagePoints,worldPoints);

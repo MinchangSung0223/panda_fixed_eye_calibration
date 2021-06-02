@@ -23,7 +23,7 @@ from math import pi
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
 
-
+checkrboard_size = (8, 11) 
 def getHomogeneousFormFromPose(eef_pose):
         #end-effector quaternion orietation
         eef_quat_ori = np.array([eef_pose.orientation.x,eef_pose.orientation.y,eef_pose.orientation.z,eef_pose.orientation.w]) 
@@ -76,6 +76,7 @@ os.mkdir("./Images")
 os.mkdir("./Poses")
 
 try:
+    cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
     while True:
 
         # Wait for a coherent pair of frames: depth and color
@@ -108,8 +109,15 @@ try:
         Tbe = getHomogeneousFormFromPose(eef_pose) #base to eef
 
         # Show images
-        cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
-        cv2.imshow('RealSense', images)
+        _img = cv2.cvtColor(color_image.copy(),cv2.COLOR_BGR2RGB)
+        img = cv2.cvtColor(_img.copy(),cv2.COLOR_RGB2BGR)
+        gray = cv2.cvtColor(img.copy(),cv2.COLOR_RGB2GRAY)
+        ret, corners = cv2.findChessboardCorners(gray, (checkrboard_size[1],checkrboard_size[0]),None)
+        if ret==True:
+                img_chess = cv2.drawChessboardCorners(img, (checkrboard_size[1],checkrboard_size[0]), corners,ret)
+                cv2.imshow('RealSense', img_chess)
+        else:	
+                cv2.imshow('RealSense', images)
         if cv2.waitKey(1)& 0xFF == 32: 
 
                 imagename = "./Images/"+str(count).zfill(2)+".png"

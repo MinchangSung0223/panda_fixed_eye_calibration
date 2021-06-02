@@ -6,13 +6,8 @@ for i = 1:1:image_num
     I = imread(imds.Files{i});
     [imagePoints,boardSize] = detectCheckerboardPoints(I);
     boardSize
-    if boardSize(1)~=board_size(1)+1 || boardSize(2)~=board_size(2)+1 
+    if boardSize(1)==board_size(1)+1 || boardSize(2)==board_size(2)+1 
         disp(string(imds.Files{i})+"  this image has not correct bordsize")
-        filename = char(imds.Files{i})
-        filename = filename(end-5:end-3)
-        delete(imds.Files{i});
-        delete("./Poses/"+filename+"txt");
-
         continue;
     end
     worldPoints = generateCheckerboardPoints(boardSize, squareSize);

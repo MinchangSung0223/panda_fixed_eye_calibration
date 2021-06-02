@@ -33,9 +33,6 @@ def getHomogeneousFormFromPose(eef_pose):
         Tbe[0,3] = eef_pose.position.x
         Tbe[1,3] = eef_pose.position.y
         Tbe[2,3] = eef_pose.position.z
-        R = np.reshape(p.getMatrixFromQuaternion(p.getQuaternionFromEuler([0,0,-pi/4])),[3,3])
-        Temp = np.eye(4)
-        Temp[0:3,0:3] = R
         Tbe = np.matmul(Tbe,Temp)
         return Tbe
 

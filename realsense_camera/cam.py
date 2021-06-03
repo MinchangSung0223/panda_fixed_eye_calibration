@@ -33,7 +33,7 @@ def getHomogeneousFormFromPose(eef_pose):
         Tbe[0,3] = eef_pose.position.x
         Tbe[1,3] = eef_pose.position.y
         Tbe[2,3] = eef_pose.position.z
-        Tbe = np.matmul(Tbe,Temp)
+        
         return Tbe
 
 moveit_commander.roscpp_initialize(sys.argv)
